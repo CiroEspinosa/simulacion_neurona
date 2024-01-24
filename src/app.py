@@ -1,5 +1,6 @@
 import streamlit as st
 from neurona import Neuron
+import os
 
 ruta_imagen_local = os.path.join("img", "2480958_15286-removebg-preview.png")
 st.image(ruta_imagen_local)
