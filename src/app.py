@@ -24,7 +24,7 @@ pesos = []
 st.write("### Pesos")
 for col, default_peso in zip(st.columns(num_x_w), default_pesos):
     with col:
-        peso = st.number_input(f'w$_{len(pesos)}$', key=f'w{len(pesos)}', value=default_peso)
+        peso = st.number_input(f'w$_{len(pesos)}$', key=f'w{len(pesos)}', value=float(default_peso))
         pesos.append(peso)
 
 st.write(f'w = {pesos}')
@@ -33,7 +33,7 @@ entradas = []
 st.write("### Entradas")
 for col, default_entrada in zip(st.columns(num_x_w), default_entradas):
     with col:
-        entrada = st.number_input(f'x$_{len(entradas)}$', key=f'x{len(entradas)}', value=default_entrada)
+        entrada = st.number_input(f'x$_{len(entradas)}$', key=f'x{len(entradas)}', value=float(default_entrada))
         entradas.append(entrada)
 
 st.write(f'x = {entradas}')
@@ -41,7 +41,7 @@ st.write(f'x = {entradas}')
 col1, col2 = st.columns(2)
 with col1:
     st.write("### Sesgo")
-    sesgo = st.number_input("Introduce el valor del sesgo", value=default_sesgo)
+    sesgo = st.number_input("Introduce el valor del sesgo", value=float(default_sesgo))
 with col2:
     st.write("### Función de activación")
     func_options = ["relu", "sigmoid", "tanh"]
