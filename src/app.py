@@ -2,23 +2,24 @@ import streamlit as st
 
 st.title("Simulador de neurona")
 
-# Slider para seleccionar el número de entradas/pesos
-num_entradas = st.slider("Elige el número de entradas/pesos que tendrá la neurona", min_value=1, max_value=10, value=3, key="s_pe")
+
+num_x_w = st.slider("Elige el número de entradas/pesos que tendrá la neurona", min_value=1, max_value=10, value=3, key="s_pe")
 
 # Crear columnas para los inputs de pesos
-st.write("#### Pesos")
+st.write("## Pesos")
 pesos = []
-for i in range(num_entradas):
-    peso = st.number_input(f'w{i}', key=f'w{i}')
-    pesos.append(peso)
+for col in st.columns(num_x_w):
+    with col:
+        peso = st.number_input(f'w{len(peso)}', key=f'w{len(peso)}')
+        pesos.append(peso)
 
 
-st.write(f'Pesos: {pesos}')
+st.write(f'w = {pesos}')
 
 # Crear columnas para los inputs de entradas
-st.write("#### Entradas")
+st.write("## Entradas")
 entradas = []
-for i in range(num_entradas):
+for i in range(num_x_w):
     entrada = st.number_input(f'x{i}', key=f'x{i}')
     entradas.append(entrada)
 
