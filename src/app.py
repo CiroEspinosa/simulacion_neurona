@@ -10,7 +10,7 @@ st.write("## Pesos")
 pesos = []
 for col in st.columns(num_x_w):
     with col:
-        peso = st.number_input(f'w{len(peso)}', key=f'w{len(peso)}')
+        peso = st.number_input(f'w{len(pesos)}', key=f'w{len(pesos)}')
         pesos.append(peso)
 
 
