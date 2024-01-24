@@ -1,6 +1,8 @@
 import streamlit as st
 from neurona import Neuron
 
+ruta_imagen_local = os.path.join("img", "2480958_15286-removebg-preview.png")
+st.image(ruta_imagen_local)
 st.title("Simulador de neurona")
 
 num_x_w = st.slider("Elige el número de entradas/pesos que tendrá la neurona", min_value=1, max_value=10, value=3, key="s_pe")
