@@ -12,7 +12,9 @@ default_sesgo = 100
 default_func = "relu"
 
 # Widgets para que el usuario pueda modificar los valores por defecto
+
 pesos = []
+st.write("### Pesos")
 for col, default_peso in zip(st.columns(num_x_w), default_pesos):
     with col:
         peso = st.number_input(f'w$_{len(pesos)}$', key=f'w{len(pesos)}', value=default_peso)
@@ -21,6 +23,7 @@ for col, default_peso in zip(st.columns(num_x_w), default_pesos):
 st.write(f'w = {pesos}')
 
 entradas = []
+st.write("### Entradas")
 for col, default_entrada in zip(st.columns(num_x_w), default_entradas):
     with col:
         entrada = st.number_input(f'x$_{len(entradas)}$', key=f'x{len(entradas)}', value=default_entrada)
