@@ -15,7 +15,7 @@ default_func = "relu"
 pesos = []
 for col, default_peso in zip(st.columns(num_x_w), default_pesos):
     with col:
-        peso = st.number_input(f'w$b_{len(pesos)}$', key=f'w{len(pesos)}', value=default_peso)
+        peso = st.number_input(f'w$_{len(pesos)}$', key=f'w{len(pesos)}', value=default_peso)
         pesos.append(peso)
 
 st.write(f'w = {pesos}')
@@ -23,7 +23,7 @@ st.write(f'w = {pesos}')
 entradas = []
 for col, default_entrada in zip(st.columns(num_x_w), default_entradas):
     with col:
-        entrada = st.number_input(f'x<sub>{len(entradas)}</sub>', key=f'x{len(entradas)}', value=default_entrada)
+        entrada = st.number_input(f'x$_{len(entradas)}$', key=f'x{len(entradas)}', value=default_entrada)
         entradas.append(entrada)
 
 st.write(f'x = {entradas}')
