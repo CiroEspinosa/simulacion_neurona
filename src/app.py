@@ -11,6 +11,10 @@ default_entradas = [4, 6, -3]
 default_sesgo = 100
 default_func = "relu"
 
+# Asegurarse de que hay suficientes valores por defecto para las columnas
+default_pesos += [0] * max(0, num_x_w - len(default_pesos))
+default_entradas += [0] * max(0, num_x_w - len(default_entradas))
+
 # Widgets para que el usuario pueda modificar los valores por defecto
 
 pesos = []
