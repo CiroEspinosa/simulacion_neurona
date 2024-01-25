@@ -6,7 +6,7 @@ st.set_page_config(layout="wide")
 
 ruta_imagen_local = os.path.join("img", "2480958_15286-removebg-preview.png")
 st.image(ruta_imagen_local, width=200)
-st.title("Simulador de neurona")
+st.title("## Simulador de neurona")
 
 num_x_w = st.slider("Elige el número de entradas/pesos que tendrá la neurona", min_value=1, max_value=10, value=3, key="s_pe")
 
@@ -35,7 +35,8 @@ for col, def_entrada in zip(st.columns(num_x_w), def_entradas):
         entrada = st.number_input(f'x$_{len(entradas)}$', key=f'x{len(entradas)}', value=float(def_entrada))
         entradas.append(entrada)
 
-st.write(f'x = {entradas}')
+st.code(f'x = {entradas}')
+
 
 col1, col2 = st.columns(2)
 with col1:
