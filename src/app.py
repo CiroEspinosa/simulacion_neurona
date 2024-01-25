@@ -3,6 +3,7 @@ from neurona import Neuron
 import os
 
 st.set_page_config(layout="wide")
+
 ruta_imagen_local = os.path.join("img", "2480958_15286-removebg-preview.png")
 st.image(ruta_imagen_local, width=200)
 st.title("Simulador de neurona")
